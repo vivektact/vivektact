@@ -58,11 +58,7 @@
 
 ###
 
-
 <br clear="both">
-
 <img src="https://raw.githubusercontent.com/vivektact/vivektact/output/snake.svg" alt="Snake animation" />
-
-
 
 ###
