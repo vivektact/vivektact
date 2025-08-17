@@ -15,10 +15,16 @@ jobs:
       contents: write   # ✅ allow pushing to branches
     steps:
       - uses: actions/checkout@v3
+
+      # Generate the snake SVG
       - uses: Platane/snk@v3
         with:
           github_user_name: vivektact
-          outputs: dist/snake.svg
+          outputs: |
+            dist/snake.svg?color_snake=000000   # 🐍 Black snake
+            dist/snake-dark.svg?palette=github-dark  # 🌙 Dark mode version
+
+      # Push the generated files to the output branch
       - uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
